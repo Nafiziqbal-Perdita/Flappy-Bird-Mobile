@@ -1,30 +1,34 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LogicManager : MonoBehaviour
 {
-
-
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] GameObject gameOverScreen;
+
     public int score { get; private set; }
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // scoreIncrement();
         scoreText.text = score.ToString();
-
     }
+
     public void scoreIncrement()
     {
         score++;
+        scoreText.text = score.ToString();
+    }
+
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void restartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
