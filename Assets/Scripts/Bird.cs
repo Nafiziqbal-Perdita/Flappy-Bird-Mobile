@@ -73,6 +73,8 @@ public class Bird : MonoBehaviour
         if (!isBirdAlive)
             return;
 
+            Debug.Log("Game Over");
+
         isBirdAlive = false;
         logicManager.gameOver();
     }

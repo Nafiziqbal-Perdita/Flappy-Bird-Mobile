@@ -8,6 +8,7 @@ TagManager:
   - Bird
   - TopPipe
   - BottomPipe
+  - Enemy
   layers:
   - Default
   - TransparentFX
