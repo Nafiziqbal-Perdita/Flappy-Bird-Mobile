@@ -8,6 +8,10 @@ public class PipeSpawner : MonoBehaviour
     float timer = 0f;
     float heightOffset = 4f;
 
+    void Start()
+    {
+        pipeSpawner();
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
