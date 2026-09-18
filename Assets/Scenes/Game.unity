@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b10c139e0a244b418376f11cf8eb80b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  audioManager: {fileID: 1507442988}
   scoreText: {fileID: 430836081}
   gameOverScreen: {fileID: 1297700128}
 --- !u!4 &486345304
@@ -1155,6 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   firePoint: {fileID: 790288126}
+  audioManager: {fileID: 1507442988}
   shootingRange: 20
   damage: 1
   lineRenderer: {fileID: 1601153783}
