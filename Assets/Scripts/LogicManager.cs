@@ -1,9 +1,11 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LogicManager : MonoBehaviour
 {
+    [SerializeField] AudioManager audioManager;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] GameObject gameOverScreen;
 
@@ -22,13 +24,27 @@ public class LogicManager : MonoBehaviour
 
     public void gameOver()
     {
+        audioManager.StopBackgroundMusic();
+        audioManager.PlayGameOver();
         gameOverScreen.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void restartGame()
     {
+        StartCoroutine(RestartWithSound());//restart game with sound
+    }
+
+    IEnumerator RestartWithSound()
+    {
+        audioManager.PlayButtonClick();
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene(
+            SceneManager.GetActiveScene().name
+        );
     }
 }

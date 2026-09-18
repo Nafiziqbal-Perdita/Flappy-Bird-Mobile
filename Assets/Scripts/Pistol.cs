@@ -4,8 +4,9 @@ using System.Collections;
 public class Pistol : MonoBehaviour
 {
     [SerializeField] Transform firePoint;
+    [SerializeField] AudioManager audioManager;//audio manager will be stored here
 
-    [SerializeField] float shootingRange = 50f;
+    [SerializeField] float shootingRange = 100f;
     [SerializeField] int damage = 1;
     [SerializeField] LineRenderer lineRenderer;
     void Start()
@@ -87,6 +88,7 @@ public class Pistol : MonoBehaviour
     IEnumerator ShowShot(Vector3 endPosition)
     {
         lineRenderer.enabled = true;
+        audioManager.PlayGunShot();
 
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, endPosition);
