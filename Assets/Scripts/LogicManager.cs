@@ -10,16 +10,26 @@ public class LogicManager : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
 
     public int score { get; private set; }
+    public Pipe pipe;
 
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         scoreText.text = score.ToString();
+        pipe=GameObject.FindGameObjectWithTag("Pipe").GetComponent<Pipe>();
     }
 
-    public void scoreIncrement()
+    public void scoreIncrement(int needToIncrement)
     {
-        score++;
+        score += needToIncrement;
         scoreText.text = score.ToString();
+
+
+    if (score % 10 == 0)
+    {
+        pipe.IncreaseSpeed();
+    }
     }
 
     public void gameOver()

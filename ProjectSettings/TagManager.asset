@@ -9,6 +9,7 @@ TagManager:
   - TopPipe
   - BottomPipe
   - Enemy
+  - Pipe
   layers:
   - Default
   - TransparentFX

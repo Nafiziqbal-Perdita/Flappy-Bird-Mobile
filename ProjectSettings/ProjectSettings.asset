@@ -149,7 +149,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   xboxOneDisableKinectGpuReservation: 1
@@ -301,32 +302,44 @@ PlayerSettings:
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: 498c8d5ae25b7724e8dbb4ccd2ec250b, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: e195354f38bec974e862a1fe9e0f8f5a, type: 3}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: 498c8d5ae25b7724e8dbb4ccd2ec250b, type: 3}
       m_Width: 216
       m_Height: 216
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: 117c41cc60758a641bf19933120c7991, type: 3}
       m_Width: 162
       m_Height: 162
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: 498c8d5ae25b7724e8dbb4ccd2ec250b, type: 3}
       m_Width: 108
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 47b342b820fa88e448eac969ab8b0046, type: 3}
+      - {fileID: 2800000, guid: 498c8d5ae25b7724e8dbb4ccd2ec250b, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2
@@ -653,9 +666,9 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: -8030570891474961867, guid: fec19d486c3e24c47aeef56c649cc10d, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1

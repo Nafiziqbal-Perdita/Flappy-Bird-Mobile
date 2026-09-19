@@ -26,7 +26,7 @@ public LogicManager logicManager;
     {
         if (other.CompareTag("Bird"))
         {
-            logicManager.scoreIncrement();
+            logicManager.scoreIncrement(1);
         }
     }
 

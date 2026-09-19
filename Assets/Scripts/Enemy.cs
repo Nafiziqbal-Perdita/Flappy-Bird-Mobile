@@ -7,6 +7,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float enemyMoveSpeed = 2.5f;
     [SerializeField] float deadZone = -14f;
     [SerializeField] int enemyHealth = 1;
+    public LogicManager logicManager;
+
+
+    void Start()
+    {
+        logicManager=GameObject.FindGameObjectWithTag("LogicManager").GetComponent<LogicManager>();
+    }
 
     void Update()
     {
@@ -35,6 +42,7 @@ public class Enemy : MonoBehaviour
     public void killEnemy()
     {
         Debug.Log("Enemy Killed");
+        logicManager.scoreIncrement(5);
         Instantiate(
       deathEffect,
       transform.position,

@@ -7,7 +7,7 @@ public class Pipe : MonoBehaviour
 
     void Update()
     {
-      
+
         transform.position += Vector3.left * pipeMoveSpeed * Time.deltaTime;
 
         if (transform.position.x < deadZone)
@@ -15,4 +15,14 @@ public class Pipe : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+ public void IncreaseSpeed()
+    {
+        pipeMoveSpeed *= 1.05f;//increase pipe move speed by 5% when the func is called
+
+        Debug.Log("Pipe Speed: " + pipeMoveSpeed);
+    }
+
+
 }
